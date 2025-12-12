@@ -82,7 +82,7 @@ In my upcoming projects, I will use fundamental HTML and CSS with proper semanti
 
 - [CSS :last-child pseudo-class ](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:last-child) - Almost the same for first but this selection targets the last data in the table row.
 
-- [CSS :marker pseudo-class ](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:last-child) - It helps me solve to select marker box of a list item which typically contains bullet or number.
+- [CSS :marker pseudo-class ](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::marker) - It helps me solve to select marker box of a list item which typically contains bullet or number.
 
 ## Author
 
