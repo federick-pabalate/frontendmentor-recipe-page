@@ -1,0 +1,272 @@
+/* Outfit font */
+@font-face {
+  font-display: swap;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+
+/* YoungSerif font */
+@font-face {
+  font-display: swap;
+  font-family: "YoungSerif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+}
+
+/* Theme Variables (Colors, Typography) */
+:root {
+  /* Colors */
+  --main-bg-primary: #f3e5d8;
+  --card-bg-secondary: hsl(0, 0%, 100%);
+  --text-color-secondary: hsl(14, 45%, 36%);
+  --text-color-stone-600: hsl(30, 10%, 34%);
+  --text-color-stone-900: hsl(24, 5%, 18%);
+
+  /* Typography */
+  --font-outfit: "Outfit", serif;
+  --font-youngserif: "YoungSerif", serif;
+
+  /* Font sizes */
+  --fs-base: 1rem; /* body base */
+  --fs-h1: 2.5rem; /* main heading */
+  --fs-h2: 2rem; /* section heading */
+  --fs-p-lg: 1.25rem; /* paragraph (default) */
+  --fs-p-sm: 1rem; /* paragraph (large screens) */
+  --fs-prep-h2: 1.5rem; /* prep time h2 */
+  --fs-preptime: 1.25rem; /* prep time section body (large) */
+  --fs-list-lg: 1.25rem; /* list items default */
+  --fs-list-md: 1.125rem; /* list items (large screens) */
+  --fs-list-sm: 1rem; /* list items (large screens small) */
+  --fs-nutrition-lg: 1.25rem; /* nutrition values default */
+  --fs-nutrition-md: 1.125rem; /* nutrition values (large screens) */
+  --fs-attribution: 0.75rem; /* attribution text */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-primary);
+  font-family: var(--font-outfit);
+  margin: 0;
+  padding: 0;
+  font-size: var(--fs-base);
+}
+
+/* Main  */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+/* Card styles  */
+.card {
+  background-color: var(--card-bg-secondary);
+  width: 415px;
+  border-radius: 20px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 32px 32px;
+  gap: 32px;
+}
+
+.card__content div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card__image {
+  max-width: 100%;
+}
+
+/* Heading styles  */
+.card__intro h1 {
+  font-family: var(--font-youngserif);
+  font-size: var(--fs-h1);
+  line-height: 120%;
+}
+
+.card__ingredients h2,
+.card__instructions h2,
+.card__nutrition h2 {
+  font-family: var(--font-youngserif);
+  font-size: var(--fs-h2);
+  color: var(--text-color-secondary);
+  font-weight: 400;
+}
+
+.card__intro p,
+.card__nutrition p {
+  line-height: 120%;
+  font-size: var(--fs-p-lg);
+  color: var(--text-color-stone-600);
+}
+
+.card__preparation-time {
+  background-color: #fff7fc;
+  padding: 30px 30px 30px 30px;
+  border-radius: 16px;
+}
+
+.card__preparation-time h2 {
+  color: #773450;
+  font-size: var(--fs-prep-h2);
+}
+
+/* List styles  */
+.card__instructions ol {
+  line-height: 200%;
+}
+
+.card__preparation-time ul,
+.card__ingredients ul,
+.card__instructions ol {
+  line-height: 180%;
+  padding-left: 32px;
+}
+
+.card__preparation-time ul li,
+.card__ingredients ul li,
+.card__instructions ol li {
+  padding-left: 20px;
+  color: var(--text-color-stone-600);
+  font-size: var(--fs-list-lg);
+}
+
+/* Bullet point styles  */
+.card__ingredients ul li::marker,
+.card__preparation-time ul li::marker,
+.card__instructions ol li::marker {
+  color: var(--text-color-secondary);
+}
+
+.card__instructions ol li::marker {
+  font-weight: 900;
+}
+
+/* Table styles */
+.card__nutrition table {
+  border-collapse: collapse;
+}
+
+.card__nutrition table td {
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+}
+
+.card__nutrition table td:first-child {
+  color: var(--text-color-stone-600);
+  padding-left: 32px;
+}
+
+.card__nutrition table td:last-child {
+  color: var(--text-color-secondary);
+  font-weight: 900;
+  font-size: var(--fs-base);
+  padding-right: 32px;
+}
+
+/* Horizontal Rule styles */
+hr {
+  border: 1px solid #eee;
+}
+
+/** Attribution layout */
+.attribution {
+  font-size: var(--fs-attribution);
+  text-align: center;
+  padding: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Design Media Queries */
+/* Small devices */
+@media (min-width: 375px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+  .card {
+    width: 740px;
+    margin-top: 72px;
+  }
+
+  .card__image {
+    border-radius: 15px;
+    padding: 40px 40px 0 40px;
+  }
+
+  .card__content {
+    padding-top: 30px;
+  }
+
+  .card__intro p {
+    font-size: var(--fs-base);
+    line-height: 150%;
+  }
+
+  .card__preparation-time {
+    font-size: var(--fs-preptime);
+  }
+
+  /* Heading styles for large screens  */
+  .card__ingredients h2,
+  .card__instructions h2,
+  .card__nutrition h2 {
+    color: var(--text-color-secondary);
+    font-size: 1.75rem;
+  }
+
+  /* List styles for large screens  */
+  .card__preparation-time ul,
+  .card__ingredients ul,
+  .card__instructions ol {
+    font-size: var(--fs-list-md);
+    line-height: 180%;
+    padding-left: 24px;
+  }
+
+  .card__preparation-time ul li,
+  .card__ingredients ul li,
+  .card__instructions ol li {
+    padding-left: 20px;
+    color: var(--text-color-stone-600);
+    font-size: var(--fs-base);
+  }
+
+  .card__nutrition p {
+    font-size: var(--fs-list-md);
+  }
+
+  /* Table styles for large screens  */
+  .card__nutrition table td:first-child {
+    padding-left: 32px;
+  }
+
+  .card__nutrition table td:last-child {
+    font-size: var(--fs-list-md);
+    padding-right: 32px;
+  }
+
+  .card__nutrition table tr:last-child td {
+    border-bottom: none;
+  }
+}
