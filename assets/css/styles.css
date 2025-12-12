@@ -95,6 +95,7 @@ main {
 .card__intro h1 {
   font-family: var(--font-youngserif);
   font-size: var(--fs-h1);
+  color: var(--text-color-stone-900);
   line-height: 120%;
 }
 
