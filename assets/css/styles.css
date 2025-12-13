@@ -177,6 +177,10 @@ main {
   padding-right: 32px;
 }
 
+.card__nutrition table tr:last-child td {
+  border-bottom: none;
+}
+
 /* Horizontal Rule styles */
 hr {
   border: 1px solid #eee;
@@ -201,8 +205,8 @@ hr {
   }
 }
 
-/* Large screens */
-@media (min-width: 1440px) {
+/* Larger screens */
+@media (min-width: 768px) {
   .card {
     width: 740px;
     margin-top: 72px;
@@ -226,15 +230,10 @@ hr {
     line-height: 150%;
   }
 
-  .card__preparation-time {
-    font-size: var(--fs-preptime);
-  }
-
   /* Heading styles for large screens  */
   .card__ingredients h2,
   .card__instructions h2,
   .card__nutrition h2 {
-    color: var(--text-color-secondary);
     font-size: 1.75rem;
   }
 
@@ -243,33 +242,16 @@ hr {
   .card__ingredients ul,
   .card__instructions ol {
     font-size: var(--fs-list-md);
-    line-height: 180%;
     padding-left: 24px;
   }
 
   .card__preparation-time ul li,
   .card__ingredients ul li,
   .card__instructions ol li {
-    padding-left: 20px;
-    color: var(--text-color-stone-600);
     font-size: var(--fs-base);
   }
 
   .card__nutrition p {
     font-size: var(--fs-list-md);
-  }
-
-  /* Table styles for large screens  */
-  .card__nutrition table td:first-child {
-    padding-left: 32px;
-  }
-
-  .card__nutrition table td:last-child {
-    font-size: var(--fs-list-md);
-    padding-right: 32px;
-  }
-
-  .card__nutrition table tr:last-child td {
-    border-bottom: none;
   }
 }
