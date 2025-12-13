@@ -70,8 +70,6 @@ main {
 /* Card styles  */
 .card {
   background-color: var(--card-bg-secondary);
-  width: 415px;
-  border-radius: 20px;
 }
 
 .card__content {
@@ -88,7 +86,7 @@ main {
 }
 
 .card__image {
-  max-width: 100%;
+  width: 100%;
 }
 
 /* Heading styles  */
@@ -208,11 +206,15 @@ hr {
   .card {
     width: 740px;
     margin-top: 72px;
+    border-radius: 20px;
+  }
+
+  .card__image-wrapper {
+    padding: 40px 40px 0px 40px;
   }
 
   .card__image {
-    border-radius: 15px;
-    padding: 40px 40px 0 40px;
+    border-radius: 20px;
   }
 
   .card__content {
