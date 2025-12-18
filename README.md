@@ -70,11 +70,7 @@ In this section of code I found this css pseudo class :marker. It helps me to ta
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 In my upcoming projects, I will use fundamental HTML and CSS with proper semantics, making my code easier for other developers to read and understand.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
